@@ -1,0 +1,7 @@
+---
+- name: Build an image and push it to a private repo
+  docker_image:
+    path: hello-world
+    name: docker push sncf.jfrog.io/docker-amira-local/hello-world
+    tag: v1
+    push: yes

@@ -1,0 +1,3 @@
+hosts: local
+roles:
+  role: push-docker-image
