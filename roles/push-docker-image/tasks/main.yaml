@@ -1,4 +1,15 @@
 ---
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/kub/amira
+    state: directory
+    mode: '0755'
+
+- name: pull an image
+  docker_image:
+    name: hello-world
+
 - name: Build an image and push it to a private repo
   docker_image:
     path: hello-world
