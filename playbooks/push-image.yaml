@@ -1,3 +1,4 @@
-hosts: 'local'
-roles:
-  role: push-docker-image
+---
+- hosts: local
+  roles:
+    role: push-docker-image
