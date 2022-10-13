@@ -5,11 +5,11 @@ pipeline{
     stages{
         stage("A"){
             steps{
-                echo "========executing A========"
+                echo "=========executing A========"
             }
             script {
                 sh '''
-                ansible-playbook -i inventories\DEV\hosts.ini playbooks/push-image.yaml
+                ansible-playbook -i inventories/DEV/hosts.ini playbooks/push-image.yaml
                 '''
             }
            
