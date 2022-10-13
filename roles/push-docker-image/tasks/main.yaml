@@ -6,15 +6,16 @@
     state: directory
     mode: '0755'
 
-- name: Log into DockerHub
-  docker_login:
-    username: aguech
-    password: Lasmar.eline2021
-    email: amira.aguech.lasmar@gmail.com
+#- name: Log into DockerHub
+#  docker_login:
+#    username: aguech
+#    password: Lasmar.eline2021
+#    email: amira.aguech.lasmar@gmail.com
 
 - name: pull an image
   docker_image:
-    name: hello-world
+    name: https://hub.docker.com/_/hello-world
+    pull: yes
 
 - name: Build an image and push it to a private repo
   docker_image:
