@@ -35,10 +35,6 @@
    #  tag: latest
    #  push: yes
 
-  
-#  become: yes
-    #username: aguech
-   # password: Lasmar.eline2021
 - name: log to jfrog 
   docker_login:
     registry: sncf.jfrog.io/docker-amira-local
