@@ -54,8 +54,8 @@
   become: true
   file:
     state: directory
-    owner: root
-    group: root
+    owner: sofienek8s
+    group: sofienek8s
     mode: 'u=rwx,go=rx'
     dest: '{{ helm_install_dir }}'
 
@@ -77,8 +77,8 @@
     dest: '{{ helm_install_dir }}'
     extra_opts:
       - '--strip-components=1'
-    owner: root
-    group: root
+    owner: sofienk8s
+    group: sofienek8s
     mode: 'o-w'
     creates: '{{ helm_install_dir }}/helm'
 
