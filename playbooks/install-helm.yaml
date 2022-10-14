@@ -1,4 +1,5 @@
 ---
 - hosts: helm-machine
+  become_user: sofienek8s
   roles:
     - role: install-helm
