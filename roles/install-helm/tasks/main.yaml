@@ -77,8 +77,8 @@
     dest: '{{ helm_install_dir }}'
     extra_opts:
       - '--strip-components=1'
-    owner: sofienk8s
-    group: sofienek8s
+    owner: root
+    group: root
     mode: 'o-w'
     creates: '{{ helm_install_dir }}/helm'
 
@@ -88,6 +88,7 @@
     src: '{{ helm_install_dir }}/helm'
     dest: '/usr/local/bin/helm'
     state: link
+    sudo: yes 
     owner: sofienek8s
     group: sofienek8s
     mode: 'u=rwx,go=rx'
