@@ -35,6 +35,9 @@
     username: amira.aguech.lasmar@gmail.com
     password: Lasmar&eline2021
 
+- name : tag image with command before to push it
+  command: docker tag hello-world:latest hello-word:v1
+  
 - name: Build an image and push it to a private repo
   docker_image:
     name: hello-world
