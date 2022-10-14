@@ -12,9 +12,10 @@
     password: Lasmar.eline2021
     email: amira.aguech.lasmar@gmail.com
 
+
 - name: pull an image
   docker_image:
-    name: https://hub.docker.com/_/hello-world
+    name: hello-world
     pull: yes
 #  become: yes
     #username: aguech
