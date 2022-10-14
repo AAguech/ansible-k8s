@@ -89,6 +89,6 @@
     dest: '/usr/local/bin/helm'
     state: link
     sudo: yes 
-    owner: sofienek8s
-    group: sofienek8s
+    owner: root
+    group: root
     mode: 'u=rwx,go=rx'
