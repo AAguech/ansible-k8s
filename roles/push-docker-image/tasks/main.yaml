@@ -13,6 +13,7 @@
 #    email: amira.aguech.lasmar@gmail.com
 
 - name: pull an image
+  become: yes
   docker_image:
     name: https://hub.docker.com/_/hello-world
     pull: yes
