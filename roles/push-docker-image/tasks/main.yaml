@@ -37,10 +37,9 @@
 
 - name : tag image with command before to push it
   command: docker tag hello-world:latest hello-word:v1
-  
+
 - name: Build an image and push it to a private repo
   docker_image:
-    name: hello-world
+    name: hello-world:v1
     repository: sncf.jfrog.io/docker-amira-local/hello-world
-    tag: v1
     push: yes
