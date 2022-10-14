@@ -13,8 +13,8 @@
     group: docker
     mode: '666'
   become: true
-  become_user: kub
-  become_method: sudo
+  become_user: root
+ # become_method: sudo
   
 
 - name: Log into DockerHub
