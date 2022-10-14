@@ -16,6 +16,7 @@
   docker_image:
     name: https://hub.docker.com/_/hello-world
     pull: yes
+  become: yes
     #username: aguech
    # password: Lasmar.eline2021
 
