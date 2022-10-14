@@ -31,7 +31,7 @@
 - name: Tag and push to local registry
   docker_image:
      name: hello-word
-     repository: /home/kub/amira
+     registry: /home/kub/amira
      pull: yes
      push: yes
 
