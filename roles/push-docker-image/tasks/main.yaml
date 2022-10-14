@@ -6,12 +6,12 @@
     state: directory
     mode: '0755'
 
-- name: Change file ownership, group and permissions
-  ansible.builtin.file:
-    path: /var/run/docker.sock
-    owner: root
-    group: docker
-    mode: '666'
+#- name: Change file ownership, group and permissions
+#  ansible.builtin.file:
+#    path: /var/run/docker.sock
+#    owner: root
+ #   group: docker
+ #   mode: '666'
  # become_method: sudo
   
 
@@ -36,6 +36,8 @@
     password: Lasmar&eline2021
 
 - name: Build an image and push it to a private repo
+  become: true
+  become_method: sudo
   docker_image:
     path: hello-world
     name: sncf.jfrog.io/docker-amira-local/hello-world
