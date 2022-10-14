@@ -1,4 +1,4 @@
 ---
-- hosts: local
+- hosts: helm-machine
   roles:
     - role: install-helm
