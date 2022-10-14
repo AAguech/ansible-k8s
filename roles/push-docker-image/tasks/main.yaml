@@ -38,7 +38,8 @@
 - name: Tag and push to local registry
   docker_image:
      name: alpine/helm
-     repository: /home/kub/amira
+     repository: /home/kub/amira/helm
+     tag: latest
      push: yes
 
   
