@@ -88,6 +88,6 @@
     src: '{{ helm_install_dir }}/helm'
     dest: '/usr/local/bin/helm'
     state: link
-    owner: root
-    group: root
+    owner: ubuntu
+    group: ubuntu
     mode: 'u=rwx,go=rx'
