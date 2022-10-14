@@ -10,7 +10,7 @@
   ansible.builtin.file:
     path: /var/run/docker.sock
     owner: root
-    group: root
+    group: docker
     mode: '666'
 
 - name: Log into DockerHub
