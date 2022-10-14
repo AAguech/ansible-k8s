@@ -77,8 +77,8 @@
     dest: '{{ helm_install_dir }}'
     extra_opts:
       - '--strip-components=1'
-    owner: root
-    group: root
+    owner: kub
+    group: kub
     mode: 'o-w'
     creates: '{{ helm_install_dir }}/helm'
 
