@@ -39,5 +39,4 @@
   docker_image:
     name: hello-world
     registry: sncf.jfrog.io/docker-amira-local/hello-world
-    tag: latest
     push: yes
