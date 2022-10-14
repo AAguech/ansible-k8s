@@ -1,3 +1,4 @@
-hosts: local
-roles:
-  role: package-helm-chart
+---
+- hosts: local
+  roles:
+    - role: install-helm
