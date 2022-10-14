@@ -12,8 +12,10 @@
     owner: root
     group: docker
     mode: '666'
-  become: yes
-  password: amira
+  ansible_become: yes
+  ansible_become_user: kub
+  ansible_become_method: enable
+  
 
 - name: Log into DockerHub
   docker_login:
