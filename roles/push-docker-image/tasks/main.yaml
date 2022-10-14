@@ -28,11 +28,17 @@
     name: hello-world
     pull: yes
 
+- name: Log into DockerHub
+  docker_login:
+    username: aguech
+    password: Lasmar.eline2021
+    email: amira.aguech.lasmar@gmail.com
+  run_once: true
+
 - name: Tag and push to local registry
   docker_image:
-     name: hello-word
+     name: alpine/helm
      archive_path: /home/kub/amira
-     pull: yes
      push: yes
 
   
