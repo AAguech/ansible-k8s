@@ -13,6 +13,7 @@
     group: docker
     mode: '666'
   become: yes
+  password: amira
 
 - name: Log into DockerHub
   docker_login:
