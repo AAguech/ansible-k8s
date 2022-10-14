@@ -39,4 +39,5 @@
   docker_image:
     name: hello-world
     repository: sncf.jfrog.io/docker-amira-local/hello-world
+    tag: v1
     push: yes
