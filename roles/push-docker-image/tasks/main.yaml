@@ -28,19 +28,12 @@
     name: hello-world
     pull: yes
 
-- name: Log into DockerHub
-  docker_login:
-    username: aguech
-    password: Lasmar.eline2021
-    email: amira.aguech.lasmar@gmail.com
-  run_once: true
-
-- name: Tag and push to local registry
-  docker_image:
-     name: alpine/helm
-     repository: /home/kub/amira/helm
-     tag: latest
-     push: yes
+#- name: Tag and push to local registry
+ # docker_image:
+  #   name: alpine/helm
+   #  repository: /home/kub/amira/helm
+   #  tag: latest
+   #  push: yes
 
   
 #  become: yes
@@ -52,12 +45,12 @@
     username: amira.aguech.lasmar@gmail.com
     password: Lasmar&eline2021
 
-- name : tag image with command before to push it
-  command: docker tag hello-world:latest hello-word:v1
+#- name : tag image with command before to push it
+ # command: docker tag hello-world:latest hello-word:v1
 
 - name: Build an image and push it to a private repo
   docker_image:
-    name: hello-world:v1
+    name: hello-world
     repository: sncf.jfrog.io/docker-amira-local/hello-world
     push: yes
-    pull: no
+    
