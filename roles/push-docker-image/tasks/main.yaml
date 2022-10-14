@@ -6,11 +6,11 @@
     state: directory
     mode: '0755'
 
-- name: Log into DockerHub
-  docker_login:
-    username: aguech
-    password: Lasmar.eline2021
-    email: amira.aguech.lasmar@gmail.com
+#- name: Log into DockerHub
+#  docker_login:
+#    username: aguech
+#    password: Lasmar.eline2021
+#    email: amira.aguech.lasmar@gmail.com
 
 
 - name: pull an image
