@@ -43,3 +43,4 @@
     name: hello-world:v1
     repository: sncf.jfrog.io/docker-amira-local/hello-world
     push: yes
+    pull: no
