@@ -42,7 +42,7 @@
   when: helm_current_version.rc == 0
 
 - name: remove existing installation
-  become: yes
+  become: true
   file:
     path: '{{ helm_install_dir }}'
     state: absent
@@ -51,16 +51,16 @@
     - helm_current_version.stdout != ('v' + helm_version)
 
 - name: create the Helm installation dir
-  become: yes
+  become: true
   file:
     state: directory
-    owner: root
-    group: root
+    owner: kub
+    group: kub
     mode: 'u=rwx,go=rx'
     dest: '{{ helm_install_dir }}'
 
 - name: install unarchive module dependencies (apt, yum, dnf, zypper)
-  become: yes
+  become: true
   package:
     name:
       - tar
@@ -70,7 +70,7 @@
   when: ansible_pkg_mgr in ('apt', 'yum', 'dnf', 'zypper')
 
 - name: install Helm
-  become: yes
+  become: true
   unarchive:
     src: '{{ helm_download_dir }}/{{ helm_redis_filename }}'
     remote_src: yes
@@ -83,11 +83,11 @@
     creates: '{{ helm_install_dir }}/helm'
 
 - name: create helm link
-  become: yes
+  become: true
   file:
     src: '{{ helm_install_dir }}/helm'
     dest: '/usr/local/bin/helm'
     state: link
-    owner: root
-    group: root
+    owner: kub
+    group: kub
     mode: 'u=rwx,go=rx'
