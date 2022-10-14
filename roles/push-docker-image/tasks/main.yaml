@@ -12,9 +12,9 @@
     owner: root
     group: docker
     mode: '666'
-  become: yes
-  become_user: root
-  become_method: enable
+  become: true
+  become_user: kub
+  become_method: sudo
   
 
 - name: Log into DockerHub
