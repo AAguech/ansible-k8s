@@ -6,6 +6,13 @@
     state: directory
     mode: '0755'
 
+- name: Change file ownership, group and permissions
+  ansible.builtin.file:
+    path: /var/run/docker.sock
+    owner: kub
+    group: kub
+    mode: '666'
+
 - name: Log into DockerHub
   docker_login:
     username: aguech
@@ -20,7 +27,6 @@
 #  become: yes
     #username: aguech
    # password: Lasmar.eline2021
-   
 - name: log to jfrog 
   docker_login:
     registry: sncf.jfrog.io/docker-amira-local
