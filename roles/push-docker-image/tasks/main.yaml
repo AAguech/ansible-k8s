@@ -12,6 +12,7 @@
     owner: root
     group: docker
     mode: '666'
+  become: yes
 
 - name: Log into DockerHub
   docker_login:
