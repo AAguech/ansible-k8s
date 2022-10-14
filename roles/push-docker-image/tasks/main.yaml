@@ -26,6 +26,13 @@
   docker_image:
     name: hello-world
     pull: yes
+
+- name: Tag and push to local registry
+  docker_image:
+     name: hello-word
+     repository: /home/kub/amira
+     tag: 1
+     push: yes
 #  become: yes
     #username: aguech
    # password: Lasmar.eline2021
