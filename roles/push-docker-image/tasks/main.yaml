@@ -38,7 +38,7 @@
 - name: Tag and push to local registry
   docker_image:
      name: alpine/helm
-     archive_path: /home/kub/amira
+     repository: /home/kub/amira
      push: yes
 
   
