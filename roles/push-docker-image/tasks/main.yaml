@@ -20,6 +20,7 @@
     username: aguech
     password: Lasmar.eline2021
     email: amira.aguech.lasmar@gmail.com
+  run_once: true
 
 
 - name: pull an image
@@ -31,7 +32,10 @@
   docker_image:
      name: hello-word
      repository: /home/kub/amira
+     pull: yes
      push: yes
+
+  
 #  become: yes
     #username: aguech
    # password: Lasmar.eline2021
