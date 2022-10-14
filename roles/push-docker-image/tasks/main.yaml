@@ -12,9 +12,9 @@
     owner: root
     group: docker
     mode: '666'
-  ansible_become: yes
-  ansible_become_user: root
-  ansible_become_method: enable
+  become: yes
+  become_user: root
+  become_method: enable
   
 
 - name: Log into DockerHub
