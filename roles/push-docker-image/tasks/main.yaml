@@ -12,7 +12,6 @@
     owner: root
     group: docker
     mode: '666'
-  become: true
  # become_method: sudo
   
 
