@@ -31,7 +31,6 @@
   docker_image:
      name: hello-word
      repository: /home/kub/amira
-     tag: latest
      push: yes
 #  become: yes
     #username: aguech
