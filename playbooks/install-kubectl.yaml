@@ -1,0 +1,4 @@
+---
+- hosts: minikube-machine
+  roles:
+    - role: install-kubectl
