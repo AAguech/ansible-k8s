@@ -1,0 +1,4 @@
+---
+- hosts: helm-machine
+  roles:
+    - role: install-minikub
