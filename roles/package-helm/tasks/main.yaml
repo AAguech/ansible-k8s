@@ -1,0 +1,7 @@
+---
+
+#appele de task add-repo-helm
+- include_tasks: add-repo-helm.yml
+
+#appele de task package-helm-helm
+#- include_tasks: package-helm.yml
