@@ -23,10 +23,10 @@ kubectl_bin_directory: "/usr/local/bin"
 kubectl_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}"
 
 # Owner of "kubectl" binary
-kubectl_owner: "root"
+kubectl_owner: "amira"
 
 # Group of "kubectl" binary
-kubectl_group: "root"
+kubectl_group: "amira"
 
 # Specifies the permissions of the "kubectl" binary
 kubectl_binary_mode: "0755"
