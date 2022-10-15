@@ -39,7 +39,7 @@
     dest: '{{ minikube_install_dir }}'
 
 - name: install Minikube
- # become: yes
+  become: true
   copy:
     src: '{{ minikube_download_dir }}/{{ minikube_download_filename }}'
     remote_src: yes
