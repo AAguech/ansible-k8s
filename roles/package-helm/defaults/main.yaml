@@ -1,0 +1,8 @@
+---
+#creat helm_work_directory
+helm_work_directory: /home/sofienek8s/projet-helm-k8s
+
+artifactory_url: https://sncf.jfrog.io/artifactory/api/helm
+
+artifactory_repository: demo-helm
+project_name: demo-helm
