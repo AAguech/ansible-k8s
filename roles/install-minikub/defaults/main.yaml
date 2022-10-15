@@ -6,7 +6,7 @@ minikube_version: '1.27.1'
 minikube_install_dir: '/usr/local/bin'
 
 # Dir where Minikube should be download
-minikube_download_dir: '/home/sofienek8s/package-minikube'
+minikube_download_dir: '/home/amira/package-minikube'
 
 # Path where Minikube should be installed
 minikube_install_path: '{{ minikube_install_dir }}/minikube'
