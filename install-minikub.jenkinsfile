@@ -8,7 +8,7 @@ pipeline{
                 echo "=========executing A========"
                 script {
                 sh '''
-                ansible-playbook -i inventories/DEV/hosts.ini playbooks/install-minikub.yaml --extra-vars "ansible_sudo_pass=$ANSIBLE_SUDO"
+                ansible-playbook -i inventories/DEV/hosts.ini playbooks/install-minikub.yaml --extra-vars "ansible_sudo_pass={{ ANSIBLE_SUDO }}"
                 '''
             }
             }
