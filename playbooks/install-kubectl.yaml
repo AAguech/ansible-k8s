@@ -1,4 +1,5 @@
 ---
 - hosts: minikube-machine
+  become: yes
   roles:
     - role: install-kubectl
