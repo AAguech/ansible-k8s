@@ -37,10 +37,7 @@
 - name : debug find_resultat test
   debug:
     var: find_result
-  
-- name : debug find_resultat
-  debug:
-    var: find_result.file
+
 
 - name: Pushing all files to artifactory
   uri:
@@ -52,8 +49,8 @@
     src: "{{ item.path }}"
     user: "{{ artifactory_username }}"
     password: "{{ artifactory_password }}"
-   # headers:
-    #  X-JFrog-Art-Api: "{{ artifactory_api_key }}"
+    headers:
+      X-JFrog-Art-Api: "{{ artifactory_api_key }}"
   with_items:
       - "{{ find_result.files }}"
 

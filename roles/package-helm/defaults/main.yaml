@@ -2,10 +2,11 @@
 #creat helm_work_directory
 helm_work_directory: /home/amira/projet-helm-k8s/demo-helm
 
-artifactory_url: https://firstproject.jfrog.io/ui/repos/tree/General
+artifactory_url: https://firstproject.jfrog.io/artifactory
 
 artifactory_repository: demoChart
 project_name: demoChart
 
 artifactory_username: amir2aguech@gmail.com
 artifactory_password: Lasmar.eline2021
+artifactory_api_key: 'AKCp8nGjy3qZ3Hh2rhskxw2bWH3FSHEA6qgYpwKZLEJYNgGhKfe44JaGVLnSG3okRUAiaDCCn'
