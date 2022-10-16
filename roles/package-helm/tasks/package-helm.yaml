@@ -51,7 +51,7 @@
     src: "{{ item.path }}"
    # headers:
     #  X-JFrog-Art-Api: "{{ artifactory_api_key }}"
-    with_items:
+  with_items:
       - "{{ find_result.files }}"
 
 - name: Cleanup work directory
