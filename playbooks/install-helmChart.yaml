@@ -3,5 +3,5 @@
   roles:
     - role: install-helmChart
       extra_params:
-        image.repository: "{{docker_repo}}/{{app_name}}"
-        image.tag: "{{selected_version}}"
+        image.repository: "{{ docker_repo }}/{{ app_name }}"
+        image.tag: "{{ selected_version }}"
