@@ -2,9 +2,10 @@
 APP_NAME: demo-sncf
 artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
-repo_name: "{{ artifactory_url }}/{{ artifactory_repository }}/"
+repo_name: "{{ artifactory_url }}/{{ artifactory_repository }}"
 target_ns: default
 CHART_VERSION: 'latest'
+repo_add_name: demo-Chart
 
 artifactory_username: amir2aguech@gmail.com
 artifactory_password: Lasmar.eline2021
