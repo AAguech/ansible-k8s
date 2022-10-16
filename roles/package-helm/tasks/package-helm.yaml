@@ -47,10 +47,10 @@
     return_content: yes
     status_code: 201
     src: "{{ item.path }}"
-    user: "{{ artifactory_username }}"
-    password: "{{ artifactory_password }}"
-   # headers:
-    #  X-JFrog-Art-Api: "{{ artifactory_api_key }}"
+   # user: "{{ artifactory_username }}"
+   # password: "{{ artifactory_password }}"
+    headers:
+      X-JFrog-Art-Api: "{{ artifactory_api_key }}"
   with_items:
       - "{{ find_result.files }}"
 
