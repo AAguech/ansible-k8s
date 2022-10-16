@@ -1,4 +1,4 @@
 ---
-- hosts: helm-machine
+- hosts: minikube-machine
   roles:
     - role: install-helm
