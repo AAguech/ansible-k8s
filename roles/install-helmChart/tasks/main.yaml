@@ -5,12 +5,12 @@
 
 - name: Contatenate 'set' variables
   set_fact:
-    extra_sets: "{{ extra_params | to_json | regrex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set ')}}"
+    extra_sets: "{{ extra_params | to_json | regex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set ')}}"
   when: extra_params is defined
 
 - name: concatenate 'set-file' variables
   set_fact:
-    file_params_map: "{{ file_params | to_json | regrex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set-file ')}}"
+    file_params_map: "{{ file_params | to_json | regex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set-file ')}}"
   when: file_params is defined
 
 - name: Basic Install command
