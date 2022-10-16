@@ -1,4 +1,16 @@
 ---
+
+- name: get files
+  find:
+    paths: "{{ helm_work_directory }}/new"
+    file_type: "file"
+  register: find_result
+
+- name : debug find_resultat test
+  debug:
+    var: find_result
+
+
 - name: Pushing all files to artifactory
   uri:
     url: "{{ artifactory_url }}/{{ artifactory_repository }}/{{ item.path | basename }}"
