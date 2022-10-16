@@ -2,7 +2,7 @@
 #creat helm_work_directory
 helm_work_directory: /home/amira/projet-helm-k8s/demo-helm
 
-artifactory_url: https://firstproject.jfrog.io/artifactory
+artifactory_url: https://firstproject.jfrog.io/ui/repos/tree/General
 
 artifactory_repository: demoChart
 project_name: demoChart
