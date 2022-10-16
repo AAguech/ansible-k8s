@@ -18,7 +18,7 @@
 - name: Log into DockerHub
   docker_login:
     username: aguech
-    password: Lasmar.eline2021
+    password: Lasmar.Eline2021
     email: amira.aguech.lasmar@gmail.com
   run_once: true
 
