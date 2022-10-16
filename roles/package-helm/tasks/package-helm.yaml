@@ -34,6 +34,14 @@
     file_type: "file"
   register: find_result
 
+- name : debug find_resultat test
+  debug:
+    var: find_result
+  
+- name : debug find_resultat
+  debug:
+    var: find_result.file
+
 - name: Pushing all files to artifactory
   uri:
     url: "{{ artifactory_url }}/{{ artifactory_repository }}/{{ item.path | basename }}"
@@ -45,6 +53,7 @@
     #  X-JFrog-Art-Api: "{{ artifactory_api_key }}"
     with_items:
       - "{{ find_result.files }}"
+
 - name: Cleanup work directory
   file:
     name: "{{ item }}"
