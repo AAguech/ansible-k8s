@@ -4,7 +4,7 @@ artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
 repo_name: "{{ artifactory_url }}/{{ artifactory_repository }}"
 target_ns: default
-CHART_VERSION: latest
+CHART_VERSION: '0.1.1'
 
 artifactory_username: amir2aguech@gmail.com
 artifactory_password: Lasmar.eline2021

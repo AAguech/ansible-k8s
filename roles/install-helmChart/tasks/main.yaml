@@ -33,7 +33,7 @@
 
 - name: Install helm chart latest version
   command: "{{ install_command }} --username {{ artifactory_username }} --password {{ artifactory_password }}"
-  when: CHART_VERSION == 'latest'
+  when: CHART_VERSION == '0.1.1'
 
 - name: Install a specific version
   command: "{{ install_command }} --version {{ CHART_VERSION }}"
