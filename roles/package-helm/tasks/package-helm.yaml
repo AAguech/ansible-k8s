@@ -24,7 +24,7 @@
     chdir: "{{ helm_work_directory }}"
 
 - name: Index charts
-  command: "helm repo index --merge old/index.yaml new/ --url {{ artifactory_url }}/{{ artifactory_repository }} --username amir2aguech@gmail.com --password Lasmar.eline2021"
+  command: "helm repo index --merge old/index.yaml new/ --url {{ artifactory_url }}/{{ artifactory_repository }}"
   args:
     chdir: "{{ helm_work_directory }}"
 
