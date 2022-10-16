@@ -46,6 +46,7 @@
   uri:
     url: "{{ artifactory_url }}/{{ artifactory_repository }}/{{ item.path | basename }}"
     method: PUT
+    remote_src: yes
     return_content: yes
     status_code: 201
     src: "{{ item.path }}"
