@@ -54,8 +54,8 @@
   become: true
   file:
     state: directory
-    owner: sofienek8s
-    group: sofienek8s
+    owner: amira
+    group: amira
     mode: 'u=rwx,go=rx'
     dest: '{{ helm_install_dir }}'
 
