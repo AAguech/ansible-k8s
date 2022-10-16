@@ -1,5 +1,8 @@
 ---
 
+- name: Add helm repo
+  command: helm repo add demoChart {{ repo_name }} --username {{ artifactory_username }} --password {{ artifactory_password }}
+
 - name: Update repositories index
   command: helm repo update
 
