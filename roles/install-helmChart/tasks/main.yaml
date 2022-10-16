@@ -13,8 +13,8 @@
     file_params_map: "{{ file_params | to_json | regrex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set-file ')}}"
   when: file_params is defined
 
-#- name: Basic Install command
-- set_fac:
+- name: Basic Install command
+  set_fac:
     install_command: "helm install {{ APP_NAME }} {{ repo_name }} -n {{ target_ns }}"
 
 - name: Add extra params
