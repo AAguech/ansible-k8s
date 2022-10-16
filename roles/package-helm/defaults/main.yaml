@@ -6,3 +6,6 @@ artifactory_url: https://firstproject.jfrog.io/artifactory
 
 artifactory_repository: demoChart
 project_name: demoChart
+
+artifactory_username: amir2aguech@gmail.com
+artifactory_password: Lasmar.eline2021
