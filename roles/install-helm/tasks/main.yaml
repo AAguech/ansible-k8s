@@ -88,7 +88,6 @@
     src: '{{ helm_install_dir }}/helm'
     dest: '/usr/local/bin/helm'
     state: link
-    sudo: yes 
     owner: amira
     group: amira
     mode: 'u=rwx,go=rx'
