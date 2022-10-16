@@ -2,6 +2,6 @@
 - hosts: minikube-machine
   roles:
     - role: install-helmChart
-         extra_params:
-            image.repository: "{{docker_repo}}/{{app_name}}"
-            image.tag: "{{selected_version}}"
+      extra_params:
+        image.repository: "{{docker_repo}}/{{app_name}}"
+        image.tag: "{{selected_version}}"
