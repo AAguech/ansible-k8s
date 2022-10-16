@@ -1,0 +1,40 @@
+---
+
+- name: Update repositories index
+  command: helm repo update
+
+- name: Contatenate 'set' variables
+  set_fact:
+    extra_sets: "{{ extra_params | to_json | regrex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set ')}}"
+  when: extra_params is defined
+
+- name: concatenate 'set-file' variables
+  set_fact:
+    file_params_map: "{{ file_params | to_json | regrex_replace('\\:\\ ','=') | regex_replace('[{}\\\"]') | regex_replace('\\,\\ ',' --set-file ')}}"
+  when: file_params is defined
+
+- name: Basic Install command
+  set_fac:
+    install_command: "helm install {{ APP_NAME }} {{ repo_name }} -n {{ target_ns }}"
+
+- name: Add extra params
+  set_fact:
+    install_command: "{{ install_command }} --set {{ extra_sets }}"
+  when: extras_params is defined
+
+- name: Add set-file params
+  set_fact:
+    install_command: "{{ install_command }} --set-file {{ file_params_map }}"
+  when: file_parms is defined
+
+- name: Install helm chart stable version
+  command: "{{ install_command }} --version {{ stable_version }}"
+  when: CHART_VERSION == 'stable'
+
+- name: Install helm chart latest version
+  command: "{{ install_command }}"
+  when: CHART_VERSION == 'latest'
+
+- name: Install a specific version
+  command: "{{ install_command }} --version {{ CHART_VERSION }}"
+  when: CHART_VERSION != 'stable' and CHART_VERSION != 'latest'

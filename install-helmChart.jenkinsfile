@@ -8,7 +8,7 @@ pipeline{
                 echo "=========executing A========"
                 script {
                 sh '''
-                ansible-playbook -i inventories/DEV/hosts.ini playbooks/package-helmChart.yaml --extra-vars "ansible_sudo_pass=amira"
+                ansible-playbook -i inventories/DEV/hosts.ini playbooks/install-helmChart.yaml --extra-vars "ansible_sudo_pass=amira"
                 '''
             }
             }
