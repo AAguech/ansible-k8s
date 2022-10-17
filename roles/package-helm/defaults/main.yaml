@@ -8,5 +8,5 @@ artifactory_repository: demoChart
 project_name: demoChart
 
 artifactory_username: amir2aguech@gmail.com
-artifactory_password: Lasmar.eline2021
+artifactory_password: *********
 artifactory_api_key: AKCp8nGjy3qzEBUb2ZLJ1EsPiAHPaVchEuKvMyFUkNMCU6j4sAMzuBCoSCvV22N8G9YKTPUpn
