@@ -1,22 +1,5 @@
 ---
-- name: Create work directories
-  file:
-    name: "{{ item }}"
-    state: directory
-  with_items:
-    - "{{ helm_work_directory }}/old"
-    - "{{ helm_work_directory }}/new"
 
-- name: get the original index file
-  get_url:
-      url: "{{ artifactory_url }}/{{ artifactory_repository }}/index.yaml"
-      dest: "{{ helm_work_directory }}/old/index.yaml"
-      mode: 0755
-      backup: yes
-      validate_certs: true
-      force: true
-  no_log: "{{ no_debug | default(true) }}"
-  ignore_errors: true
 
 - name: Package charts
   command: "helm package {{ project_name }}/ --destination new/"

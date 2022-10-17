@@ -1,7 +1,7 @@
 ---
 
 #appele de task add-repo-helm
-#- include_tasks: add-repo-helm.yaml
+- include_tasks: add-repo-helm.yaml
 
 #appele de task package-helm-helm
 - include_tasks: package-helm.yaml
