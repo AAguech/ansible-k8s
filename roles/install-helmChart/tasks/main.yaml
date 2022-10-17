@@ -1,8 +1,10 @@
 ---
 
 #- name: Add helm repo
-#  command: helm repo add demo-Chart {{ repo_name }} --username {{ artifactory_username }} --password {{ artifactory_password }}
-
+#  command: helm repo add demo-Chart {{ repo_name }} --username {{ artifactory_username }} --password {{ artifactory_password }
+#- name: Add helm repo
+#  command: helm repo add demoChart https://firstproject.jfrog.io/artifactory/demoChart --username {{ artifactory_username }} {{ artifactory_password }}
+  
 - name: Update repositories index
   command: helm repo update
 
@@ -18,7 +20,7 @@
 
 - name: Basic Install command
   set_fact:
-    install_command: "helm install {{ APP_NAME }} {{ repo_name }} -n {{ target_ns }}"
+    install_command: "helm install {{ APP_NAME }} {{ artifactory_repository }} -n {{ target_ns }}"
 
 - name: Add extra params
   set_fact:
