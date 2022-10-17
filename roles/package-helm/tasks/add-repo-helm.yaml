@@ -1,4 +1,5 @@
 ---
+
 - name: Add helm repo
-  command: helm repo add demo-Chart https://sncf.jfrog.io/artifactory/demoChart --username amira.aguech.lasmar@gmail.com --password ******
-   
+  command: helm repo add demoChart https://firstproject.jfrog.io/artifactory/demoChart --username {{ artifactory_username }} {{ artifactory_password }}
+  
