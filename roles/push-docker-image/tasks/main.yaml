@@ -16,7 +16,7 @@
   
 
 - name: Log into DockerHub
-  docker_login:
+  community.docker.docker_login:
     username: amira.aguech.lasmar@gmail.com
     password: Lasmar.eline2021
    # email: amira.aguech.lasmar@gmail.com
