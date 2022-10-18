@@ -55,10 +55,3 @@
       - "{{ find_result.files }}"
 
 
-- name: Cleanup work directory
-  file:
-    name: "{{ item }}"
-    state: absent
-  with_items:
-    - "{{ helm_work_directory }}/old"
-    - "{{ helm_work_directory }}/new"
