@@ -1,11 +1,4 @@
 ---
-
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /home/kub/amira
-    state: directory
-    mode: '0755'
-
 - name: Log into DockerHub
   docker_login:
     username: AAgeuch
