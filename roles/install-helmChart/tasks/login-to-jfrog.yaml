@@ -5,6 +5,13 @@
  #   username: amir2aguech@gmail.com
 #    password: Lasmar.eline2021
 
+- name: log to jfrog 
+  docker_login:
+    registry: firstproject.jfrog.io/hello-world
+    #registry: sncf.jfrog.io/docker-amira-local 
+    username: amir2aguech@gmail.com
+    password: Lasmar.eline2021 
+
 - name: log to jfrog with command
   #command: "docker login -u amir2aguech@gmail.com --password Lasmar.eline2021 firstproject.jfrog.io"
   command: "docker pull firstproject.jfrog.io/hello-world/hello-world:latest --username {{ artifactory_username }} --password {{ artifactory_password }}"
