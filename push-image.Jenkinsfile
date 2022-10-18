@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "ansible-agent"
+        label "agent-helm-k8s"
     }
     stages{
         stage("A"){
