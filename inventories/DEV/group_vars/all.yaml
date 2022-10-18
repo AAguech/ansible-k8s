@@ -2,4 +2,4 @@
 docker_repo: "sncf.jfrog.io/docker-amira-local"
 app_name: "hello-world"
 selected_version: "latest"
-serviceAccount_name: default
+serviceAccount_name: "default"
