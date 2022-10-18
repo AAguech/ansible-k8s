@@ -1,5 +1,5 @@
 ---
-docker_repo: firstproject.jfrog.io/hello-world/hello-world
+docker_repo: "firstproject.jfrog.io/hello-world"
 app_name: "hello-world"
 selected_version: "latest"
 serviceAccount_name: "default"
