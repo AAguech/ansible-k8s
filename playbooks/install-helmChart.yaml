@@ -7,3 +7,4 @@
           image.repository: "{{ docker_repo }}/{{ app_name }}"
           image.tag: "{{ selected_version }}"
           serviceAccount.create : "{{ is_created }}"
+          nameOverride: hello-snc
