@@ -1,5 +1,5 @@
 ---
-APP_NAME: hello-capge
+APP_NAME: hello-sncf
 artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
 repo_name: "demoChart/demoChart"
