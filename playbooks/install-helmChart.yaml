@@ -6,5 +6,7 @@
         extra_params:
           image.repository: "{{ docker_repo }}/{{ app_name }}"
           image.tag: "{{ selected_version }}"
+          image.secrets: "{{ secrets_name }}"
           serviceAccount.create : "{{ is_created }}"
+
          
