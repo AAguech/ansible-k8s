@@ -37,13 +37,6 @@
   command: "{{ install_command }} --version {{ stable_version }}"
   when: CHART_VERSION == 'stable'
 
-- name: Log into Artifactory
-  docker_login:
-    username: aguech
-    password: Lasmar.eline2021
-#    email: amira.aguech.lasmar@gmail.com
-  run_once: true
-
 - name: Install helm chart latest version
   command: "{{ install_command }} --set {{ extra_sets }} --username {{ artifactory_username }} --password {{ artifactory_password }}"
   when: CHART_VERSION == 'latest'
