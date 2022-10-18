@@ -4,7 +4,8 @@
 #  command: helm repo add demo-Chart {{ repo_name }} --username {{ artifactory_username }} --password {{ artifactory_password }
 #- name: Add helm repo
 #  command: helm repo add demoChart https://firstproject.jfrog.io/artifactory/demoChart --username {{ artifactory_username }} {{ artifactory_password }}
-  
+- include_tasks: login-to-jfrog.yaml
+
 - name: Update repositories index
   command: helm repo update
 
@@ -35,6 +36,13 @@
 - name: Install helm chart stable version
   command: "{{ install_command }} --version {{ stable_version }}"
   when: CHART_VERSION == 'stable'
+
+- name: Log into Artifactory
+  docker_login:
+    username: aguech
+    password: Lasmar.eline2021
+#    email: amira.aguech.lasmar@gmail.com
+  run_once: true
 
 - name: Install helm chart latest version
   command: "{{ install_command }} --set {{ extra_sets }} --username {{ artifactory_username }} --password {{ artifactory_password }}"
