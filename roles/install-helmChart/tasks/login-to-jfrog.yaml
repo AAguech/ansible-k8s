@@ -1,6 +1,6 @@
 ---
 - name: log to jfrog 
   docker_login:
-    registry: firstproject.jfrog.io/hello-world/hello-world 
+    registry: firstproject.jfrog.io
     username: amir2aguech@gmail.com
     password: Lasmar.eline2021
