@@ -2,7 +2,7 @@
 APP_NAME: demo-sncf
 artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
-repo_name: "demoChart/artifactory"
+repo_name: "demoChart/demoChart/{{ artifactory_url }}"
 target_ns: default
 CHART_VERSION: 'latest'
 repo_add_name: demo-Chart
