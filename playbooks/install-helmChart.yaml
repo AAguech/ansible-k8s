@@ -8,5 +8,5 @@
           image.tag: "{{ selected_version }}"
           image.secrets: "{{ secrets_name }}"
           serviceAccount.create : "{{ is_created }}"
-          imagePullSecrets: Always
+          imagePullPolicy: Always
          
