@@ -1,5 +1,5 @@
 ---
-docker_repo: "sncf.jfrog.io/docker-amira-local"
+docker_repo: firstproject.jfrog.io/hello-world/hello-world
 app_name: "hello-world"
 selected_version: "latest"
 serviceAccount_name: "default"
