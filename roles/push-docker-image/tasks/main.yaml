@@ -6,18 +6,21 @@
     state: directory
     mode: '0755'
 
-#- name: Change file ownership, group and permissions
-#  ansible.builtin.file:
-#    path: /var/run/docker.sock
-#    owner: root
- #   group: docker
- #   mode: '666'
- # become_method: sudo
-  
+- name: Change file ownership, group and permissions
+  ansible.builtin.file:
+    path: /var/run/docker.sock
+    owner: root
+    group: docker
+    mode: '666'
+  become_method: sudo
+
 - name: Log into DockerHub
-  community.docker.docker_login:
+  docker_login:
     username: AAguech
     password: Lasmar.eline2021
+    email: amira.aguech.lasmar@gmail.com
+  run_once: true
+
 
 - name: pull an image
   docker_image:
