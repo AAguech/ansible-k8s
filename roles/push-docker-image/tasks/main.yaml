@@ -18,7 +18,7 @@
 - name: Log into DockerHub
   docker_login:
     username: aguech
-    password: *******
+    password: Lasmar.eline2021
     email: amira.aguech.lasmar@gmail.com
   #run_once: true
 
@@ -37,10 +37,10 @@
 
 - name: log to jfrog 
   docker_login:
-    registry: firstproject.jfrog.io/push-image/docker-amira-local
-    #registry: sncf.jfrog.io/docker-amira-local
+    registry: firstproject.jfrog.io/hello-world/docker-amira-local
+    #registry: sncf.jfrog.io/docker-amira-local 
     username: amir2aguech@gmail.com
-    password: *******
+    password: Lasmar.eline2021
 
 #- name : tag image with command before to push it
  # command: docker tag hello-world:latest hello-word:v1
@@ -48,7 +48,7 @@
 - name: Build an image and push it to a private repo
   docker_image:
     name: hello-world
-    repository: firstproject.jfrog.io/push-image/docker-amira-local/hello-world
+    repository: firstproject.jfrog.io/hello-world/docker-amira-local/hello-world
     #repository: sncf.jfrog.io/docker-amira-local/hello-world
     push: yes
     
