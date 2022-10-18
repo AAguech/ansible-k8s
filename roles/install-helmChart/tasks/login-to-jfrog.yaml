@@ -6,4 +6,4 @@
 #    password: Lasmar.eline2021
 
 - name: log to jfrog with command
-  command: "docker login -uamir2aguech@gmail.com firstproject.jfrog.io"
+  command: "docker login -u amir2aguech@gmail.com --pasword Lasmar.eline2021 firstproject.jfrog.io"
