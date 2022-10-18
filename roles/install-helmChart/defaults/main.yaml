@@ -1,5 +1,5 @@
 ---
-APP_NAME: demok8S
+APP_NAME: test
 artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
 repo_name: "demoChart/demochart"
