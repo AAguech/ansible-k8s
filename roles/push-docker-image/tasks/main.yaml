@@ -1,9 +1,25 @@
 ---
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /home/kub/amira
+    state: directory
+    mode: '0755'
+
+#- name: Change file ownership, group and permissions
+#  ansible.builtin.file:
+#    path: /var/run/docker.sock
+#    owner: root
+ #   group: docker
+ #   mode: '666'
+ # become_method: sudo
+  
+
 - name: Log into DockerHub
   docker_login:
-    username: AAgeuch
+    username: AAguech
     password: Lasmar.eline2021
-    email: amira.aguech.lasmar@gmail.com
+   # email: amira.aguech.lasmar@gmail.com
   run_once: true
 
 
