@@ -4,4 +4,4 @@ app_name: "hello-world"
 selected_version: "latest"
 serviceAccount_name: "default"
 is_created: false
-secrets_name: docker-secrets
+secrets_name: registry-secrets
