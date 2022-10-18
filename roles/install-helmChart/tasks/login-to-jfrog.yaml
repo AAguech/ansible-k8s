@@ -1,6 +1,9 @@
 ---
-- name: log to jfrog 
-  docker_login:
-    repository: firstproject.jfrog.io
-    username: amir2aguech@gmail.com
-    password: Lasmar.eline2021
+#- name: log to jfrog 
+#  docker_login:
+  #  repository: firstproject.jfrog.io
+ #   username: amir2aguech@gmail.com
+#    password: Lasmar.eline2021
+
+- name: log to jfrog with command
+  command: "docker login -uamir2aguech@gmail.com firstproject.jfrog.io"
