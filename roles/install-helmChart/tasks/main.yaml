@@ -36,9 +36,12 @@
   command: "{{ install_command }} --version {{ stable_version }}"
   when: CHART_VERSION == 'stable'
 
+- name: Update repositories index
+  command: helm repo update
+  
 - name: Install helm chart latest version
   command: "{{ install_command }} --version {{ CHART_VERSION }}  --username {{ artifactory_username }} --password {{ artifactory_password }}"
-  when: CHART_VERSION == '0.1.1'
+  when: CHART_VERSION == 'latest'
 
 - name: Install a specific version
   command: "{{ install_command }} --version {{ CHART_VERSION }}"
