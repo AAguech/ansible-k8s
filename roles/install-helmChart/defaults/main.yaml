@@ -1,5 +1,5 @@
 ---
-APP_NAME: demo-sncf1
+APP_NAME: hello-word
 artifactory_url: https://firstproject.jfrog.io/artifactory
 artifactory_repository: demoChart
 repo_name: "demoChart/demoChart"
