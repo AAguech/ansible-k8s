@@ -38,9 +38,9 @@
 
 - name: Update repositories index
   command: helm repo update
-  
+
 - name: Install helm chart latest version
-  command: "{{ install_command }} --version {{ CHART_VERSION }}  --username {{ artifactory_username }} --password {{ artifactory_password }}"
+  command: "{{ install_command }}  --username {{ artifactory_username }} --password {{ artifactory_password }}"
   when: CHART_VERSION == 'latest'
 
 - name: Install a specific version
