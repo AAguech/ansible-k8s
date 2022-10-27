@@ -38,7 +38,6 @@
 - name: log to jfrog 
   docker_login:
     registry: firstproject.jfrog.io/hello-world
-    #registry: sncf.jfrog.io/docker-amira-local 
     username: amir2aguech@gmail.com
     password: Lasmar.eline2021
 
@@ -49,6 +48,5 @@
   docker_image:
     name: hello-world
     repository: firstproject.jfrog.io/hello-world/hello-world
-    #repository: sncf.jfrog.io/docker-amira-local/hello-world
     push: yes
     
